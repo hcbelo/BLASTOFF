@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+    <script>
+      
+var inicio = new Date();
+var fim = new Date();
+
+inicio.setHours(prompt("digite a hora sem os minutos do inicio da partida"));
+inicio.setMinutes(prompt("digite os minutos do inicio da partida"));
+
+fim.setHours(prompt("digite a hora sem os minutos do fim da partida"));
+fim.setMinutes(prompt("digite os minutos sem a hora do fim da partida"));
+
+var time = fim.getTime() - inicio.getTime();
+alert(time)
+var horas = time / 3600000;
+
+document.write("A partida durou "+ parseInt(horas, 10) + "h e " + ((time % 3600000) / 60000) + "mn");
+
+    </script>
+</html>
